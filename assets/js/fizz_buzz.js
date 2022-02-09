@@ -36,13 +36,3 @@ for (var number = 0; number < input_number + 1; number++) {
     console.log(number, ":" , high_multiple_message);
   }
 }
-
-
-function main() {
-
-}
-
-
-function fizzbuzzA() {
-
-}
