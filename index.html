@@ -44,14 +44,49 @@
 
 
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
 
 </head>
 <body>
-  <p>Hi</p>
+  <img src="assets/svg/godot_icon.svg" alt="" class="responsive">
+
+  <div class="rev-style">
+    <!-- The numbers are generated automatically by JS when the script is loaded -->
+    <div class="rev-style-headingB">
+      <p>This program prints the numbers from <span class="min-input-number"></span> to <span class="max-input-number"></span>.<br />
+        For the multiples of <span class="small-multiple-number"></span>: It prints "Fizz".<br />
+        For the multiples of <span class="high-multiple-number"></span>: It prints "Buzz".<br />
+        For the numbers which are multiples of both
+        <span class="small-multiple-number"></span> and
+        <span class="high-multiple-number"></span>: It prints "FizzBuzz".
+      </p>
+      <label for="">
+        <span>Enter a number:</span>
+        <input id="small-multiple-number-input" type="number" name=""  name="Enter a number between x an y" value="80">
+      </label>
+
+      <label for="">
+        <span>Enter another number:</span>
+        <input id="high-multiple-number-input" type="number" name="Enter a number between x an y" value="90">
+      </label>
+
+      <label for="">
+        <input type="submit" name="" value="Buzz it!" onclick="fizz_buzz();">
+        <button type="submit" name="button">Buzz it 2</button>
+
+      <label for=""><span>Results:</span></label>
+      </label>
+
+      <br />
+
+      <p id="results"></p>
+
+    </div>
+  </div>
+
   <!-- JS -->
-  <script src="fizz_buzz.js" type="text/javascript"></script>
+  <script src="assets/js/fizz_buzz.js" type="text/javascript"></script>
 
 </body>
 </html>
