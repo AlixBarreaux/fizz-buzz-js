@@ -23,11 +23,11 @@ var high_multiple_message = "Buzz";
 
 // Called when the HTML document is loading
 function initialize() {
-  initialize_all_html_class_elements_content();
+  initialize_all_html_classes_and_id_elements_content();
 }
 
 
-function initialize_all_html_class_elements_content() {
+function initialize_all_html_classes_and_id_elements_content() {
   set_text_by_html_class("min-input-number", min_input_number_limit);
   set_text_by_html_class("max-input-number", max_input_numbers_limit);
 
@@ -37,6 +37,10 @@ function initialize_all_html_class_elements_content() {
 
   set_text_by_html_class("small-multiple-message", small_multiple_message);
   set_text_by_html_class("high-multiple-message", high_multiple_message);
+
+
+  document.getElementById("small-multiple-number-input").value = small_multiple_number;
+  document.getElementById("high-multiple-number-input").value = high_multiple_number;
 }
 
 
