@@ -17,6 +17,9 @@ var high_multiple_number = 5;
 var min_input_number_limit = 1;
 var max_input_numbers_limit = 100;
 
+var small_multiple_message = "Fizz";
+var high_multiple_message = "Buzz";
+
 
 // Called when the HTML document is loading
 function initialize() {
@@ -31,6 +34,9 @@ function initialize_all_html_class_elements_content() {
 
   set_text_by_html_class("small-multiple-number", small_multiple_number);
   set_text_by_html_class("high-multiple-number", high_multiple_number);
+
+  set_text_by_html_class("small-multiple-message", small_multiple_message);
+  set_text_by_html_class("high-multiple-message", high_multiple_message);
 }
 
 
