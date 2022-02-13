@@ -115,7 +115,6 @@ function process_results() {
         index += 1;
         break;
     }
-    console.log(counter, fizz, buzz);
   }
   return;
 }
