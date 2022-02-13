@@ -54,42 +54,6 @@ function set_text_by_html_class(html_class_name, new_text) {
 }
 
 
-function test() {
-  /*
-  var min_input_number = 1;
-  // Initialize the user's input which will be asked
-  var input_numbers = 100;
-  // Limit the input_number's value
-  var input_numbers_limit = 100;
-
-  var small_multiple_number = 3;
-  var high_multiple_number = 5;
-
-  var small_multiple_message = "Fizz";
-  var high_multiple_message = "Buzz";
-  var double_multiple_message = small_multiple_message + high_multiple_message;
-  */
-
-  for (var number = 0; number < input_number + 1; number++) {
-    console.log(number);
-
-    if (number % small_multiple === 0 && number % high_multiple === 0) {
-      console.log(number, ":" , double_multiple_message);
-    }
-
-    else if (number % small_multiple === 0) {
-      console.log(number, ":" , small_multiple_message);
-    }
-    else if (number % high_multiple === 0) {
-      console.log(number, ":" , high_multiple_message);
-    }
-  }
-}
-
-
-// WARNING: WRITE FIZZ / BUZZ INSTEAD OF PRINTING NUMBER!!!!!!!!!!!!!!!!!!!!!
-
-
 function process_numbers() {
   //let returnValue = "";
 
