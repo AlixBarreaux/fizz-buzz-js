@@ -9,10 +9,13 @@ What this program does:
 */
 
 
-// Limit the input_number's value to avoid memory overflow problems
+// Numbers to display from x to y
 var min_input_numbers_limit = 1;
 var max_input_numbers_limit = 100;
 
+
+// Limit the input_number's value to avoid memory overflow problems
+// ADD TRESHOLD HERE !!!!!!!!!!!!
 
 // Multiples acting on the messages to print
 var small_multiple_number = 3;
