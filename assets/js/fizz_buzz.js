@@ -55,6 +55,7 @@ function set_text_by_html_class(html_class_name, new_text) {
   for (var counter = 0; counter < html_class_elements.length; counter ++) {
     html_class_elements[counter].textContent = new_text.toString();
   }
+  return;
 }
 
 
@@ -132,4 +133,5 @@ function run() {
   return;
 }
 
+// Run when the script is loaded
 initialize();
