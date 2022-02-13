@@ -90,8 +90,6 @@ function process_results() {
         document.getElementsByClassName("grid-item-text")[index].textContent = double_multiple_message;
         document.getElementsByClassName("grid-item-text")[index].textContent += counter;
         index += 1;
-
-        //returnValue = "FizzBuzz ";
         break;
 
       case fizz:
@@ -100,8 +98,6 @@ function process_results() {
         document.getElementsByClassName("grid-item-text")[index].textContent = small_multiple_message;
         document.getElementsByClassName("grid-item-text")[index].textContent += counter;
         index += 1;
-
-        //returnValue = "Fizz ";
         break;
 
       case buzz:
@@ -110,8 +106,6 @@ function process_results() {
         document.getElementsByClassName("grid-item-text")[index].textContent = high_multiple_message;
         document.getElementsByClassName("grid-item-text")[index].textContent += counter;
         index += 1;
-
-        //returnValue = "Buzz ";
         break;
 
       default:
@@ -119,9 +113,6 @@ function process_results() {
         results_grid.innerHTML += grid_item;
         document.getElementsByClassName("grid-item-text")[index].textContent = counter;
         index += 1;
-
-
-        //returnValue = counter + " ";
         break;
     }
     console.log(counter, fizz, buzz);
