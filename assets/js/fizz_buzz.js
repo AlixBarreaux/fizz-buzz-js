@@ -14,16 +14,17 @@ var high_multiple_number = 5;
 
 
 // Limit the input_number's value to avoid memory overflow problems
-var min_input_number_limit = 1;
+var min_input_numbers_limit = 1;
 var max_input_numbers_limit = 100;
 
 var small_multiple_message = "Fizz";
 var high_multiple_message = "Buzz";
+var double_multiple_message = small_multiple_message + high_multiple_message;
 
 
 // Called when the HTML document is loading
 function initialize() {
-  initialize_all_html_classes_and_id_elements_content();
+  initialize_all_html_classes_elements_content();
 
   document.getElementById("small-multiple-number-input").value = small_multiple_number;
   document.getElementById("high-multiple-number-input").value = high_multiple_number;
@@ -31,7 +32,7 @@ function initialize() {
 
 
 function initialize_all_html_classes_elements_content() {
-  set_text_by_html_class("min-input-number", min_input_number_limit);
+  set_text_by_html_class("min-input-number", min_input_numbers_limit);
   set_text_by_html_class("max-input-number", max_input_numbers_limit);
 
 
@@ -54,6 +55,7 @@ function set_text_by_html_class(html_class_name, new_text) {
 
 
 function test() {
+  /*
   var min_input_number = 1;
   // Initialize the user's input which will be asked
   var input_numbers = 100;
@@ -66,7 +68,7 @@ function test() {
   var small_multiple_message = "Fizz";
   var high_multiple_message = "Buzz";
   var double_multiple_message = small_multiple_message + high_multiple_message;
-
+  */
 
   for (var number = 0; number < input_number + 1; number++) {
     console.log(number);
@@ -88,34 +90,49 @@ function test() {
 // WARNING: WRITE FIZZ / BUZZ INSTEAD OF PRINTING NUMBER!!!!!!!!!!!!!!!!!!!!!
 
 
-function process_numbers(value_1, value_2) {
-  let returnValue = "";
+function process_numbers() {
+  //let returnValue = "";
+
+  let results_grid = document.getElementById("results-grid");
+  let grid_item = "      <div class=\"grid-item\">\n        <p></p>\n      </div>\n";
+  let grid_item_text_content;
+  let grid_item_text = "";
+
+  console.log(results_grid);
+  console.log(grid_item);
+
+
   let fizz = false;
   let buzz = false;
 
-  for (var counter = 1; counter <= 100; counter++) {
-    fizz = counter % value_1 === 0;
-    buzz = counter % value_2 === 0;
+  for (let counter = min_input_numbers_limit; counter <= max_input_numbers_limit; counter++) {
+    // ADD COMMENT FOR BOOLEANS HERE !!!!!!!!!!!!!!!!!
+    fizz = counter % small_multiple_number === 0;
+    buzz = counter % high_multiple_number === 0;
 
     switch(true) {
       case fizz && buzz:
-        returnValue += "FizzBuzz ";
+        returnValue = "FizzBuzz ";
         break;
 
       case fizz:
-        returnValue += "Fizz ";
+        returnValue = "Fizz ";
         break;
 
       case buzz:
-        returnValue += "Buzz ";
+        returnValue = "Buzz ";
         break;
 
       default:
-        returnValue += counter + " ";
+        grid_item_text = counter + " ";
+        results_grid.innerHTML += grid_item;
+
+
+        //returnValue = counter + " ";
         break;
     }
+    console.log(counter, fizz, buzz);
   }
-  return returnValue
 }
 
 
@@ -125,10 +142,10 @@ function fizz_buzz() {
   let value_1 = document.getElementsByClassName("small-multiple-number").value;
   let value_2 = document.getElementsByClassName("high-multiple-number").value;
 
-  output = process_numbers(value_1, value_2);
+  output = process_numbers();
   console.log("Output:", output);
 
-  document.getElementById("results").innerHTML = output;
+  //document.getElementById("results").innerHTML = output;
 }
 
 initialize();

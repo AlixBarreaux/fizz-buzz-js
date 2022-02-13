@@ -49,7 +49,9 @@
 
 </head>
 <body>
-  <img src="assets/svg/godot_icon.svg" alt="" class="responsive">
+  <h1>Fizz Buzz challenge</h1>
+  <p>Made with Javascript (mainly), HTML, CSS</p>
+  <img src="assets/svg/godot_icon.svg" alt="" class="logo">
 
   <div class="rev-style">
     <!-- The numbers are generated automatically by JS when the script is loaded -->
@@ -87,13 +89,18 @@
       <label for="">
         <input type="submit" name="" value="Buzz it!" onclick="fizz_buzz();">
         <button type="submit" name="button">Buzz it 2</button>
+      </label>
 
       <label for=""><span>Results:</span></label>
-      </label>
+
 
       <br />
 
-      <p id="results"></p>
+      <div id="results-grid">
+        <div class="grid-item">
+            <p>Test</p>
+        </div>
+      </div>
 
     </div>
   </div>
