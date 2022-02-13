@@ -94,9 +94,11 @@ function process_numbers() {
   //let returnValue = "";
 
   let results_grid = document.getElementById("results-grid");
-  let grid_item = "      <div class=\"grid-item\">\n        <p></p>\n      </div>\n";
+  let grid_item = "      <div class=\"grid-item\">\n        <p class=\"grid-item-text\"></p>\n      </div>\n";
   let grid_item_text_content;
-  let grid_item_text = "";
+  let result = "";
+
+  let index = 0;
 
   console.log(results_grid);
   console.log(grid_item);
@@ -112,20 +114,40 @@ function process_numbers() {
 
     switch(true) {
       case fizz && buzz:
-        returnValue = "FizzBuzz ";
+        grid_item_text = double_multiple_message;
+        results_grid.innerHTML += grid_item;
+        document.getElementsByClassName("grid-item-text")[index].textContent = double_multiple_message;
+        document.getElementsByClassName("grid-item-text")[index].textContent += counter;
+        index += 1;
+
+        //returnValue = "FizzBuzz ";
         break;
 
       case fizz:
-        returnValue = "Fizz ";
+        grid_item_text = small_multiple_message;
+        results_grid.innerHTML += grid_item;
+        document.getElementsByClassName("grid-item-text")[index].textContent = small_multiple_message;
+        document.getElementsByClassName("grid-item-text")[index].textContent += counter;
+        index += 1;
+
+        //returnValue = "Fizz ";
         break;
 
       case buzz:
-        returnValue = "Buzz ";
+        grid_item_text = high_multiple_message;
+        results_grid.innerHTML += grid_item;
+        document.getElementsByClassName("grid-item-text")[index].textContent = high_multiple_message;
+        document.getElementsByClassName("grid-item-text")[index].textContent += counter;
+        index += 1;
+
+        //returnValue = "Buzz ";
         break;
 
       default:
         grid_item_text = counter + " ";
         results_grid.innerHTML += grid_item;
+        document.getElementsByClassName("grid-item-text")[index].textContent = counter;
+        index += 1;
 
 
         //returnValue = counter + " ";
