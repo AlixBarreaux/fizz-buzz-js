@@ -30,7 +30,7 @@ function initialize() {
 }
 
 
-function initialize_all_html_classes_and_id_elements_content() {
+function initialize_all_html_classes_elements_content() {
   set_text_by_html_class("min-input-number", min_input_number_limit);
   set_text_by_html_class("max-input-number", max_input_numbers_limit);
 
