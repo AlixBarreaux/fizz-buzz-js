@@ -55,7 +55,7 @@
 
   <div class="rev-style">
     <!-- The numbers are generated automatically by JS when the script is loaded -->
-    <div class="rev-style-headingB">
+    <div class="rev-style-heading">
 
       <div class="no-script-section">
         <noscript>
@@ -68,30 +68,38 @@
         </noscript>
       </div>
 
+      <div class="instructions-panel">
+        <p>This program prints the numbers from <span class="min-input-number"></span> to <span class="max-input-number"></span>.<br />
+          For the multiples of <span class="small-multiple-number"></span>: It prints "<span class="small-multiple-message"></span>".<br />
+          For the multiples of <span class="high-multiple-number"></span>: It prints "<span class="high-multiple-message"></span>".<br />
+          For the numbers which are multiples of both
+          <span class="small-multiple-number"></span> and
+          <span class="high-multiple-number"></span>: It prints "<span class="small-multiple-message"></span>".
+        </p>
+      </div>
+      
 
-      <p>This program prints the numbers from <span class="min-input-number"></span> to <span class="max-input-number"></span>.<br />
-        For the multiples of <span class="small-multiple-number"></span>: It prints "<span class="small-multiple-message"></span>".<br />
-        For the multiples of <span class="high-multiple-number"></span>: It prints "<span class="high-multiple-message"></span>".<br />
-        For the numbers which are multiples of both
-        <span class="small-multiple-number"></span> and
-        <span class="high-multiple-number"></span>: It prints "<span class="small-multiple-message"></span>".
-      </p>
-      <label for="">
-        <span>Enter a number:</span>
-        <input id="small-multiple-number-input" type="number" name=""  name="Enter a number between x an y" value="80">
-      </label>
+      <div class="inputs-panel">
+        <label for="">
+          <span>Enter a number:</span>
+          <input id="small-multiple-number-input" type="number" name=""  name="Enter a number between x an y" value="80">
+        </label>
+  
+        <label for="">
+          <span>Enter another number:</span>
+          <input id="high-multiple-number-input" type="number" name="Enter a number between x an y" value="90">
+        </label>
+  
+        <label for="">
+          <input type="submit" name="" value="Display Results" onclick="run();">
+        </label>
+      </div>
 
-      <label for="">
-        <span>Enter another number:</span>
-        <input id="high-multiple-number-input" type="number" name="Enter a number between x an y" value="90">
-      </label>
-
-      <label for="">
-        <input type="submit" name="" value="Buzz it!" onclick="run();">
-        <button type="submit" name="button">Buzz it 2</button>
-      </label>
-
-      <label for=""><span>Results:</span></label>
+   
+      <div class="results-panel">
+        <label for=""><span>Results:</span></label>
+      </div>
+      
 
 
       <br />
