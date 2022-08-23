@@ -10,22 +10,22 @@ What this program does:
 
 
 // Numbers to display from x to y
-var min_input_numbers_limit = 1;
-var max_input_numbers_limit = 100;
+let min_input_numbers_limit = 1;
+let max_input_numbers_limit = 100;
 
 
 // Limit the input_number's value to avoid memory overflow problems
 // ADD TRESHOLD HERE !!!!!!!!!!!!
 
 // Multiples acting on the messages to print
-var small_multiple_number = 3;
-var high_multiple_number = 5;
+let small_multiple_number = 3;
+let high_multiple_number = 5;
 
 
 // Messages to print depending on the multiples
-var small_multiple_message = "Fizz";
-var high_multiple_message = "Buzz";
-var double_multiple_message = small_multiple_message + high_multiple_message;
+let small_multiple_message = "Fizz";
+let high_multiple_message = "Buzz";
+let double_multiple_message = small_multiple_message + high_multiple_message;
 
 
 // Called when the HTML document is loading
@@ -58,7 +58,7 @@ function set_text_by_html_class(html_class_name, new_text) {
   let html_class_elements = document.getElementsByClassName(html_class_name);
 
   //console.log(document.getElementsByClassName(html_class_name)[1].textContent);
-  for (var counter = 0; counter < html_class_elements.length; counter ++) {
+  for (let counter = 0; counter < html_class_elements.length; counter ++) {
     html_class_elements[counter].textContent = new_text.toString();
   }
   return;
@@ -67,8 +67,8 @@ function set_text_by_html_class(html_class_name, new_text) {
 
 
 
-var results_grid = document.getElementById("results-grid");
-var grid_item = "      <div class=\"grid-item\">\n        <p class=\"grid-item-text\"></p>\n      </div>\n";
+let results_grid = document.getElementById("results-grid");
+let grid_item = "      <div class=\"grid-item\">\n        <p class=\"grid-item-text\"></p>\n      </div>\n";
 
 
 function process_results() {
